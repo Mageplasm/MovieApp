@@ -1,0 +1,10 @@
+<h1>Edit Book</h1>
+
+<%= simple_form_for @movie, :html => { :multipart => true } do |f| %>
+	<%= f.file_field :movie_img %>
+	<%= f.input :title, label: "Movie Title" %>
+	<%= f.input :description %>
+	<%= f.input :genre %>
+	<%= f.input :date %>
+	<%= f.button :submit %>
+<% end %>

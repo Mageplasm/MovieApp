@@ -1,0 +1,19 @@
+<h1 class = "current-genre">
+	<%= params[:genre] %>
+</h1>
+
+<% if @movies.count == 0 %>
+	<h1>No movies. Please add a movie</h1>
+
+<% else %>
+
+<div class = "row">
+	<% @movies.each do |movie| %>
+		<div class = "col-md-3">
+			<h2 class = "movie" ><%= link_to movie.title, movie_path(movie)%></h2>
+		</div>	
+	<% end %>
+</div>	
+
+<% end %>	
+
